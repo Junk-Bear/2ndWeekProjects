@@ -11,9 +11,12 @@ void Quick_Sort(int*, int, int);
 
 int main()
 {
-	int const maxNum = 5;
+	cout << "입력할 숫자 총 갯수 =";
+	int maxNum;
 
-	int arr[maxNum];
+	cin >> maxNum;
+
+	int* arr = new int[maxNum];
 	int sortNum;
 
 	cout << "숫자 "<< maxNum <<"개를 입력해 주세요" << endl;
@@ -69,6 +72,8 @@ int main()
 
 	Sum(arr, maxNum);
 	Avarage(arr, maxNum);
+
+	delete[] arr;
 }
 
 void Sum(int* arr, int const _max)
